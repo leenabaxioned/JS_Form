@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
+  <link rel="shortcut icon" href="favicon.ico" />
+  <!--font-awesome link for icons-->
+  <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
+  <link rel="stylesheet" media="screen" href="style.css" />
+</head>
+
+<body>
+  <!--container start-->
+  <div class="container">
+    <main>
+      <section class="formsection">
+          <form class="form-wrapper" action="javascript:void(0);">
+            <div class="firstname">
+              <label for="fname">First Name:</label>
+              <input type="text" id="fname"/>
+              <span id="fname-error" class="error-message"></span>
+            </div>
+            <div class="lastname">
+              <label for="lname">Last Name:</label>
+              <input type="text" id="lname"/>
+              <span id="lname-error" class="error-message"></span>
+            </div>
+            <div id="genders">
+              <label for="gender">Gender:</label>
+                <div class="malegender">
+                  <input type="radio" id="male" name="gender" value="Male">
+                  <label for="male">Male</label>
+                </div>
+                <div class="femalegender">
+                  <input type="radio" id="female" name="gender" value="Female">
+                  <label for="female">Female</label>
+                </div>
+                <span id="gender-error" class="error-message"></span>
+            </div>
+            <div class="complete_address">
+              <label for="address">Address:</label></p>
+              <textarea id="address" name="address" rows="5" cols="30"></textarea>
+              <span id="address-error" class="error-message"></span>
+            </div>
+            <div class="terms">
+              <input id="conditions" name="conditions" type="checkbox">
+              <label for="conditions">Terms and conditions</label>
+              <span id="conditions-error" class="error-message"></span>
+            </div>
+            <div class="btns">
+              <button type="submit" onclick="validateForm()" id="submitbtn" value="Submit">Submit</button>
+              <button type="cancel" id="cancelbtn" value="Cancel">Cancel</button>
+            </div>
+            <div class="thanks">
+            </div>
+          </form>
+          <div class="form-info wrapper" id="form-table">
+            <ul class="rows">
+                  <li>Name</li>
+                  <li>Last Name</li>
+                  <li>Gender</li> 
+                  <li>Address</li>
+                  <li>Edit</li>
+                  <li>Delete</li>
+                  <!-- <li><button type="submit" id="editbtn" value="Edit">Edit</button></li>
+                  <li><button type="submit" id="deletebtn" value="Delete">Delete</button></li> -->
+            </ul>
+          </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </div>
+  <!--container start-->
+</body>
+
+</html>
